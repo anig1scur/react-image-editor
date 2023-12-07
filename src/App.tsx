@@ -3,7 +3,7 @@ import { Transformer } from "react-konva";
 import { Node, NodeConfig } from "konva/lib/Node";
 import { useHotkeys } from "react-hotkeys-hook";
 import { nanoid } from "nanoid";
-import { Button, Col, Modal, Row } from "react-bootstrap";
+import { Button, Col, Container, Modal, Row } from "react-bootstrap";
 import Header from "./header";
 import Layout from "./layout";
 import SettingBar from "./settingBar";
@@ -122,7 +122,7 @@ function App() {
   );
 
   const navBar = (
-    <NavBar>
+    <Row xs={3} sm={1}   >
       {workModeList.map((data) => (
         <NavBarButton
           key={`navbar-${data.id}`}
@@ -131,7 +131,7 @@ function App() {
           onClick={getClickCallback(data.id)}
         />
       ))}
-    </NavBar>
+    </Row>
   );
 
   const hotkeyModal = (
@@ -141,9 +141,9 @@ function App() {
       </Modal.Header>
       <Modal.Body>
         {hotkeyList.map((hotkey) => (
-          <Col key={hotkey.name}>
+          <Col className="d-flex align-items-center justify-content-between m-2" key={hotkey.name}>
             <h6>{getTranslation("hotkey", hotkey.id, "name")}</h6>
-            <Row className="justify-content-end" xs={4}>
+            <Row>
               {hotkey.keys.map((key, idx) => (
                 <React.Fragment key={hotkey.name + key}>
                   {idx !== 0 && "+"}

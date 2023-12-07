@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, ButtonGroup, OverlayTrigger, Tooltip } from "react-bootstrap";
+import sizeStyles from "../style/size.module.css";
 import colorStyles from "../style/color.module.css";
 import borderStyles from "../style/border.module.css";
 import useStage from "../hook/useStage";
@@ -23,7 +24,8 @@ const NavBarButton: React.FC<NavBarButtonProps> = ({ data, onClick }) => {
   const { getTranslation } = useI18n();
 
   return (
-    <ButtonGroup vertical>
+    <ButtonGroup className={sizeStyles.widthLogo}>
+
       <OverlayTrigger
         placement="right"
         overlay={
@@ -43,6 +45,7 @@ const NavBarButton: React.FC<NavBarButtonProps> = ({ data, onClick }) => {
         </Button>
       </OverlayTrigger>
     </ButtonGroup>
+
   );
 };
 

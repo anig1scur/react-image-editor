@@ -65,11 +65,11 @@ const useRemoveImageBackground = () => {
   const autoRemoveBackground = async (image: HTMLImageElement) =>
     await predict(model.current, image);
 
-  useEffect(() => {
-    loadModel().then((_model) => {
-      model.current = _model;
-    });
-  });
+  // useEffect(() => {
+  //   loadModel().then((_model) => {
+  //     model.current = _model;
+  //   });
+  // });
 
   return {
     autoRemoveBackground,

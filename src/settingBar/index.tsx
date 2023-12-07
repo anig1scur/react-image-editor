@@ -1,5 +1,5 @@
 import React from "react";
-import { Accordion } from "react-bootstrap";
+import { Accordion, Nav } from "react-bootstrap";
 import { Node, NodeConfig } from "konva/lib/Node";
 import Widget, { WidgetKind } from "./Widget";
 import widgetList from "../config/widget.json";

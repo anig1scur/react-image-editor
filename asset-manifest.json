@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.css": "/react-image-editor/static/css/main.80616535.css",
+    "main.js": "/react-image-editor/static/js/main.f5548c30.js",
+    "index.html": "/react-image-editor/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.80616535.css",
+    "static/js/main.f5548c30.js"
+  ]
+}
